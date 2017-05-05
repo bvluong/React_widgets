@@ -28,3 +28,20 @@ div > h1 {
   flex-direction: column;
   align-items: center;
 }
+
+.autocomplete ul {
+  background-color: #AA4FBB;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: opacity 2s;
+}
+
+.autocomplete li {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms ease-in, transform 700ms ease-in;
+}

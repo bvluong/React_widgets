@@ -1,0 +1,30 @@
+
+div {
+  /*background-color: blue;*/
+  font-family: 'Merriweather';
+  width: 500px;
+}
+
+div > h1 {
+  text-align: center;
+}
+
+.clock ul {
+  background-color: #F4D03F;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.clock li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather ul {
+  list-style: none;
+  display: flex;
+  background-color: #1ABC9C;
+  flex-direction: column;
+  align-items: center;
+}

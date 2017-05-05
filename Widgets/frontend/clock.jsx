@@ -9,20 +9,35 @@ class Clock extends React.Component {
   }
 
   tick () {
-    this.setState = { date: new Date()};
+
+    this.setState({ date: new Date()});
   }
 
   componentDidMount() {
-    setInterval(this.tick(), 1000);
+    this.id = setInterval(this.tick, 1000);
   }
 
   componentWillUnmount() {
-    
+    clearInterval(this.id);
   }
 
   render () {
+    const { date } = this.state;
     return (
+    <div className="clock">
     <h1>My Clock</h1>
+      <ul>
+        <li>
+          <h1>Time:</h1>
+          <h1>{date.toLocaleTimeString()} PDT</h1>
+        </li>
+        <li>
+          <h1>Date:</h1>
+          <h1>{date.toDateString()}</h1>
+
+        </li>
+      </ul>
+    </div>
     );
   }
 
